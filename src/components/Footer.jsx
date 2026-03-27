@@ -1,0 +1,113 @@
+import { motion } from 'framer-motion';
+import { Coffee, Mail, Phone, ArrowUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const Footer = () => {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    const branches = [
+        { name: 'Aroma Café Menteng', to: '/cabang-menu?branch=menteng' },
+        { name: 'Aroma Café Sudirman', to: '/cabang-menu?branch=sudirman' },
+        { name: 'Aroma Café Bali', to: '/cabang-menu?branch=bali' },
+    ];
+
+    return (
+        <footer className="bg-gradient-to-b from-coffee-900 to-coffee-950 pt-20 pb-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* 3 Columns */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                    {/* Column 1: Brand & Description */}
+                    <div>
+                        <motion.div
+                            className="flex items-center space-x-2 mb-4"
+                            whileHover={{ scale: 1.05 }}
+                        >
+                            <Coffee className="w-10 h-10 text-coffee-400" />
+                            <span className="text-3xl font-bold font-serif text-cream">
+                                KOMA Coffee
+                            </span>
+                        </motion.div>
+                        <p className="text-cream/70 leading-relaxed">
+                            Brewing excellence since 2020. Kami menghadirkan pengalaman kopi terbaik
+                            dengan suasana yang hangat di setiap cabang kami.
+                        </p>
+                    </div>
+
+                    {/* Column 2: Cabang Kami */}
+                    <div>
+                        <h3 className="text-cream font-bold text-xl mb-6 font-serif">
+                            Cabang Kami
+                        </h3>
+                        <ul className="space-y-3">
+                            {branches.map((branch, index) => (
+                                <li key={index}>
+                                    <Link
+                                        to={branch.to}
+                                        onClick={scrollToTop}
+                                        className="text-cream/70 hover:text-coffee-300 transition-colors cursor-pointer block"
+                                    >
+                                        {branch.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Column 3: Kontak */}
+                    <div>
+                        <h3 className="text-cream font-bold text-xl mb-6 font-serif">
+                            Kontak
+                        </h3>
+                        <div className="space-y-4">
+                            <div className="flex items-center gap-3">
+                                <Mail className="w-5 h-5 text-coffee-400 flex-shrink-0" />
+                                <a
+                                    href="mailto:info@komacoffee.id"
+                                    className="text-cream/70 hover:text-coffee-300 transition-colors"
+                                >
+                                    info@komacoffee.id
+                                </a>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <Phone className="w-5 h-5 text-coffee-400 flex-shrink-0" />
+                                <a
+                                    href="tel:+622112345678"
+                                    className="text-cream/70 hover:text-coffee-300 transition-colors"
+                                >
+                                    +62 21 1234 5678
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Horizontal Line */}
+                <div className="border-t border-cream/20 my-8"></div>
+
+                {/* Copyright */}
+                <div className="text-center">
+                    <p className="text-cream/60 text-sm">
+                        © 2026 KOMA Coffee. All rights reserved.
+                    </p>
+                </div>
+            </div>
+
+            {/* Scroll to Top Button */}
+            <motion.button
+                onClick={scrollToTop}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="fixed bottom-8 right-8 bg-coffee-500 hover:bg-coffee-600 p-4 rounded-full text-white shadow-2xl transition-colors z-40"
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                <ArrowUp className="w-6 h-6" />
+            </motion.button>
+        </footer>
+    );
+};
+
+export default Footer;
