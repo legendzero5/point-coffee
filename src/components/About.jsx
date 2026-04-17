@@ -32,7 +32,7 @@ const About = () => {
     return (
         <section
             id="about"
-            className="py-20 bg-gradient-to-b from-coffee-900 to-coffee-800 relative overflow-hidden"
+            className="py-20 bg-beige-50 relative overflow-hidden"
             ref={sectionRef}
         >
             {/* Background Pattern */}
@@ -49,10 +49,10 @@ const About = () => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-5xl md:text-6xl font-bold text-cream mb-6 font-serif">
+                    <h2 className="text-5xl md:text-6xl font-bold text-coffee-800 mb-6 font-serif">
                         Our Story
                     </h2>
-                    <p className="text-xl text-cream/80 max-w-3xl mx-auto">
+                    <p className="text-xl text-coffee-700 max-w-3xl mx-auto">
                         A legacy of passion, quality, and community
                     </p>
                 </motion.div>
@@ -65,13 +65,13 @@ const About = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="space-y-6"
                     >
-                        <p className="text-lg text-cream/90 leading-relaxed">
+                        <p className="text-lg text-coffee-800 leading-relaxed">
                             Since 2011, Aroma Café has been a cornerstone of our community,
                             serving artisanal coffee crafted from the finest ethically-sourced beans.
                             Our journey began with a simple mission: to create a warm, welcoming space
                             where exceptional coffee meets genuine hospitality.
                         </p>
-                        <p className="text-lg text-cream/90 leading-relaxed">
+                        <p className="text-lg text-coffee-800 leading-relaxed">
                             Each cup tells a story of dedication, from our carefully selected beans
                             to our skilled baristas who pour their heart into every creation.
                             We believe coffee is more than a beverage—it's an experience, a moment
@@ -88,11 +88,11 @@ const About = () => {
                                     transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                                     className="text-center"
                                 >
-                                    <div className="text-coffee-400 flex justify-center mb-3">
+                                    <div className="text-gold flex justify-center mb-3">
                                         {feature.icon}
                                     </div>
-                                    <h4 className="text-cream font-semibold mb-1">{feature.title}</h4>
-                                    <p className="text-cream/70 text-sm">{feature.description}</p>
+                                    <h4 className="text-coffee-800 font-semibold mb-1">{feature.title}</h4>
+                                    <p className="text-coffee-700 text-sm">{feature.description}</p>
                                 </motion.div>
                             ))}
                         </div>

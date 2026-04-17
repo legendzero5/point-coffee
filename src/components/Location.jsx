@@ -74,7 +74,7 @@ const Location = () => {
     return (
         <section
             id="location"
-            className="py-20 bg-coffee-900 relative overflow-hidden"
+            className="py-20 bg-beige-50 relative overflow-hidden"
             ref={sectionRef}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,10 +85,10 @@ const Location = () => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-5xl md:text-6xl font-bold text-cream mb-6 font-serif">
+                    <h2 className="text-5xl md:text-6xl font-bold text-coffee-800 mb-6 font-serif">
                         Visit Us
                     </h2>
-                    <p className="text-xl text-cream/80 mb-4">
+                    <p className="text-xl text-coffee-700 mb-4">
                         Come experience the warmth of our cafe
                     </p>
 
@@ -97,10 +97,10 @@ const Location = () => {
                         initial={{ scale: 0 }}
                         animate={isInView ? { scale: 1 } : {}}
                         transition={{ duration: 0.5, delay: 0.3 }}
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass border border-beige-200 bg-white/50"
                     >
                         <div className={`w-3 h-3 rounded-full ${isOpen ? 'bg-green-500' : 'bg-red-500'} animate-pulse`} />
-                        <span className="text-cream font-semibold">
+                        <span className="text-coffee-800 font-semibold">
                             {isOpen ? 'Open Now' : 'Closed'}
                         </span>
                     </motion.div>
@@ -112,11 +112,11 @@ const Location = () => {
                         initial={{ opacity: 0, x: -50 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="h-[500px] rounded-2xl overflow-hidden glass p-2"
+                        className="h-[500px] rounded-2xl overflow-hidden glass border border-beige-200 p-2"
                     >
                         <Suspense fallback={
-                            <div className="w-full h-full bg-coffee-800 rounded-2xl flex items-center justify-center">
-                                <div className="text-cream">Loading map...</div>
+                            <div className="w-full h-full bg-white/50 rounded-2xl flex items-center justify-center border border-beige-300">
+                                <div className="text-coffee-800">Loading map...</div>
                             </div>
                         }>
                             <MapComponent />
@@ -136,18 +136,18 @@ const Location = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                                 transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                                className="glass rounded-2xl p-6 hover:bg-coffee-700/30 transition-all duration-300 group"
+                                className="glass border border-beige-300 rounded-2xl p-6 hover:bg-white/60 transition-all duration-300 group bg-white/40"
                             >
                                 <div className="flex items-start gap-4">
-                                    <div className="text-coffee-400 group-hover:scale-110 transition-transform">
+                                    <div className="text-gold group-hover:scale-110 transition-transform">
                                         {info.icon}
                                     </div>
                                     <div>
-                                        <h3 className="text-cream font-semibold text-lg mb-1">
+                                        <h3 className="text-coffee-800 font-semibold text-lg mb-1">
                                             {info.title}
                                         </h3>
-                                        <p className="text-cream/90">{info.content}</p>
-                                        <p className="text-cream/60 text-sm">{info.subContent}</p>
+                                        <p className="text-coffee-800">{info.content}</p>
+                                        <p className="text-coffee-700/70 text-sm">{info.subContent}</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -157,7 +157,7 @@ const Location = () => {
                         <motion.button
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className="w-full bg-coffee-500 hover:bg-coffee-600 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-colors duration-300 flex items-center justify-center gap-2"
+                            className="w-full bg-gold hover:bg-gold-dark text-white px-8 py-4 rounded-2xl font-bold text-lg transition-colors duration-300 flex items-center justify-center gap-2"
                         >
                             <Navigation className="w-6 h-6" />
                             Get Directions

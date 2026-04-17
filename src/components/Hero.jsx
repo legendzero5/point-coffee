@@ -21,7 +21,7 @@ const Hero = () => {
         fpsLimit: 120,
         particles: {
             color: {
-                value: '#8B6F47',
+                value: '#C9A961',
             },
             links: {
                 enable: false,
@@ -73,7 +73,7 @@ const Hero = () => {
     const buttonVariants = {
         hover: {
             scale: 1.05,
-            boxShadow: '0 10px 40px rgba(139, 111, 71, 0.4)',
+            boxShadow: '0 10px 40px rgba(201, 169, 97, 0.4)',
             transition: {
                 duration: 0.3,
             },
@@ -90,7 +90,7 @@ const Hero = () => {
         >
             {/* Parallax Background Image */}
             <div
-                className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1920')] bg-cover bg-center bg-fixed opacity-20"
+                className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1920')] bg-cover bg-center bg-fixed opacity-30"
                 style={{ transform: 'translateZ(-1px) scale(1.5)' }}
             />
 
@@ -100,7 +100,7 @@ const Hero = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            <div className="relative z-10 text-center px-4 max-w-full mx-auto">
                 <motion.div
                     initial="hidden"
                     animate="visible"
@@ -132,9 +132,9 @@ const Hero = () => {
                         whileTap="tap"
                         className="inline-block rounded-full"
                     >
-                        <button className="group relative bg-coffee-500 text-white px-10 py-5 rounded-full font-bold overflow-hidden">
+                        <button className="group relative bg-gold text-white px-10 py-5 rounded-full font-bold overflow-hidden shadow-xl">
                             <span className="relative z-10">Caffeinate Now</span>
-                            <div className="absolute inset-0 bg-coffee-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                            <div className="absolute inset-0 bg-gold-dark transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                         </button>
                     </motion.div>
                 </motion.div>
@@ -153,7 +153,7 @@ const Hero = () => {
                         ease: 'easeInOut',
                     }}
                 >
-                    <ChevronDown className="w-10 h-10 text-coffee-400" />
+                    <ChevronDown className="w-10 h-10 text-gold" />
                 </motion.div>
             </Link>
         </section>

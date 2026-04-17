@@ -64,16 +64,16 @@ const Testimonials = () => {
     return (
         <section
             id="testimonials"
-            className="py-20 bg-gradient-to-b from-coffee-800 to-coffee-900 relative overflow-hidden"
+            className="py-20 relative overflow-hidden"
             ref={sectionRef}
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
         >
             {/* Decorative Elements */}
-            <div className="absolute top-20 left-10 text-coffee-700/20">
+            <div className="absolute top-20 left-10 text-beige-300/40">
                 <Quote className="w-32 h-32" />
             </div>
-            <div className="absolute bottom-20 right-10 text-coffee-700/20 rotate-180">
+            <div className="absolute bottom-20 right-10 text-beige-300/40 rotate-180">
                 <Quote className="w-32 h-32" />
             </div>
 
@@ -85,10 +85,10 @@ const Testimonials = () => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-5xl md:text-6xl font-bold text-cream mb-6 font-serif">
+                    <h2 className="text-5xl md:text-6xl font-bold text-coffee-800 mb-6 font-serif">
                         What Our Customers Say
                     </h2>
-                    <p className="text-xl text-cream/80">
+                    <p className="text-xl text-coffee-700">
                         Don't just take our word for it
                     </p>
                 </motion.div>
@@ -102,7 +102,7 @@ const Testimonials = () => {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -100 }}
                             transition={{ duration: 0.5 }}
-                            className="glass rounded-3xl p-8 md:p-12"
+                            className="glass border border-beige-200 rounded-3xl p-8 md:p-12 bg-white/40"
                         >
                             <div className="flex flex-col md:flex-row items-center gap-8">
                                 {/* Image */}
@@ -115,7 +115,7 @@ const Testimonials = () => {
                                     <img
                                         src={testimonials[currentIndex].image}
                                         alt={testimonials[currentIndex].name}
-                                        className="w-32 h-32 rounded-full object-cover border-4 border-coffee-400 shadow-xl"
+                                        className="w-32 h-32 rounded-full object-cover border-4 border-gold shadow-xl"
                                     />
                                 </motion.div>
 
@@ -135,14 +135,14 @@ const Testimonials = () => {
                                                 animate={{ opacity: 1, scale: 1 }}
                                                 transition={{ duration: 0.3, delay: 0.4 + i * 0.1 }}
                                             >
-                                                <Star className="w-6 h-6 fill-coffee-400 text-coffee-400" />
+                                                <Star className="w-6 h-6 fill-gold text-gold" />
                                             </motion.div>
                                         ))}
                                     </motion.div>
 
                                     {/* Text */}
                                     <motion.p
-                                        className="text-cream/90 text-lg md:text-xl italic mb-6 leading-relaxed"
+                                        className="text-coffee-800 text-lg md:text-xl italic mb-6 leading-relaxed"
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         transition={{ duration: 0.5, delay: 0.5 }}
@@ -156,10 +156,10 @@ const Testimonials = () => {
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: 0.6 }}
                                     >
-                                        <p className="text-cream font-bold text-xl font-serif">
+                                        <p className="text-coffee-800 font-bold text-xl font-serif">
                                             {testimonials[currentIndex].name}
                                         </p>
-                                        <p className="text-coffee-400 text-sm">
+                                        <p className="text-gold text-sm">
                                             {testimonials[currentIndex].role}
                                         </p>
                                     </motion.div>
@@ -174,9 +174,9 @@ const Testimonials = () => {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             onClick={prevTestimonial}
-                            className="bg-coffee-700/50 hover:bg-coffee-600/50 p-3 rounded-full transition-colors"
+                            className="bg-beige-200 hover:bg-beige-300 p-3 rounded-full transition-colors shadow-md"
                         >
-                            <ChevronLeft className="w-6 h-6 text-cream" />
+                            <ChevronLeft className="w-6 h-6 text-coffee-800" />
                         </motion.button>
 
                         {/* Dots */}
@@ -186,8 +186,8 @@ const Testimonials = () => {
                                     key={index}
                                     onClick={() => setCurrentIndex(index)}
                                     className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
-                                            ? 'bg-coffee-400 w-8'
-                                            : 'bg-coffee-700/50 hover:bg-coffee-600/50'
+                                        ? 'bg-gold w-8'
+                                        : 'bg-beige-300 hover:bg-beige-400'
                                         }`}
                                 />
                             ))}
@@ -197,9 +197,9 @@ const Testimonials = () => {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             onClick={nextTestimonial}
-                            className="bg-coffee-700/50 hover:bg-coffee-600/50 p-3 rounded-full transition-colors"
+                            className="bg-beige-200 hover:bg-beige-300 p-3 rounded-full transition-colors shadow-md"
                         >
-                            <ChevronRight className="w-6 h-6 text-cream" />
+                            <ChevronRight className="w-6 h-6 text-coffee-800" />
                         </motion.button>
                     </div>
                 </div>

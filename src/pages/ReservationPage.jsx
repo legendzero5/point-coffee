@@ -12,16 +12,16 @@ const ReservationPage = () => {
     name: '',
     email: '',
     whatsapp: '',
-    branch: 'menteng',
+    branch: 'komaMambal',
     date: null,
     time: '',
     guests: '2',
   });
 
   const branches = [
-    { id: 'menteng', name: 'Aroma Café Menteng', phone: '6285123456789' },
-    { id: 'sudirman', name: 'Aroma Café Sudirman', phone: '6285234567890' },
-    { id: 'bali', name: 'Aroma Café Bali', phone: '6285345678901' },
+    { id: 'komaMambal', name: 'Koma Mambal', phone: '6281246597735' },
+    { id: 'komaPoint', name: 'Koma Point', phone: '6281246597735' },
+    { id: 'komaRenon', name: 'Koma Renon', phone: '6281246597735' },
   ];
 
   const handleChange = (e) => {
@@ -51,16 +51,16 @@ const ReservationPage = () => {
         })
       : '';
     
-    const message = `Halo Aroma Café ${selectedBranch.name}!
+    const message = `Halo ${selectedBranch.name}!
 
 Saya ingin melakukan reservasi:
 
-📝 Informasi Pribadi:
+*Informasi Pribadi:*
 Nama: ${formData.name}
 Email: ${formData.email}
 WhatsApp: ${formData.whatsapp}
 
-📍 Detail Reservasi:
+*Detail Reservasi:*
 Cabang: ${selectedBranch.name}
 Tanggal: ${formattedDate}
 Waktu: ${formData.time}
@@ -73,7 +73,7 @@ Jumlah Tamu: ${formData.guests} orang`;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-coffee-900 via-coffee-800 to-coffee-900">
+    <div className="min-h-screen bg-sand">
       {/* Hero Section */}
       <section className="relative h-[50vh] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-coffee-900/70 to-coffee-800/90 z-10" />
@@ -90,10 +90,10 @@ Jumlah Tamu: ${formData.guests} orang`;
           className="relative z-20 h-full flex items-center justify-center text-center px-4"
         >
           <div>
-            <h1 className="text-5xl md:text-6xl font-bold text-cream mb-4 font-serif">
+            <h1 className="text-5xl md:text-6xl font-bold text-cream mb-4 font-serif drop-shadow-sm">
               Reservasi
             </h1>
-            <p className="text-xl text-cream/90 max-w-2xl mx-auto">
+            <p className="text-xl text-cream/80 max-w-2xl mx-auto">
               Pesan tempat favorit Anda dan nikmati pengalaman istimewa
             </p>
           </div>
@@ -107,19 +107,19 @@ Jumlah Tamu: ${formData.guests} orang`;
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           onSubmit={handleSubmit}
-          className="glass p-8 md:p-12 rounded-3xl"
+          className="glass border border-beige-200 p-8 md:p-12 rounded-3xl bg-white/40"
         >
           {/* Personal Information Section */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-cream mb-8 font-serif flex items-center gap-3">
-              <Users className="w-8 h-8 text-coffee-500" />
+            <h2 className="text-3xl font-bold text-coffee-800 mb-8 font-serif flex items-center gap-3">
+              <Users className="w-8 h-8 text-gold" />
               Informasi Pribadi
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name */}
               <div>
-                <label htmlFor="name" className="block text-cream font-semibold mb-2">
+                <label htmlFor="name" className="block text-coffee-800 font-semibold mb-2">
                   Nama Lengkap <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -129,14 +129,14 @@ Jumlah Tamu: ${formData.guests} orang`;
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-coffee-900/50 border border-coffee-700 text-cream placeholder-cream/40 focus:outline-none focus:border-coffee-500 transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-beige-300 text-coffee-800 placeholder-coffee-700/40 focus:outline-none focus:border-gold transition-colors shadow-sm"
                   placeholder="Masukkan nama Anda"
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-cream font-semibold mb-2">
+                <label htmlFor="email" className="block text-coffee-800 font-semibold mb-2">
                   Email <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -146,14 +146,14 @@ Jumlah Tamu: ${formData.guests} orang`;
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-coffee-900/50 border border-coffee-700 text-cream placeholder-cream/40 focus:outline-none focus:border-coffee-500 transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-beige-300 text-coffee-800 placeholder-coffee-700/40 focus:outline-none focus:border-gold transition-colors shadow-sm"
                   placeholder="email@example.com"
                 />
               </div>
 
               {/* WhatsApp */}
               <div className="md:col-span-2">
-                <label htmlFor="whatsapp" className="block text-cream font-semibold mb-2">
+                <label htmlFor="whatsapp" className="block text-coffee-800 font-semibold mb-2">
                   Nomor WhatsApp <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -163,7 +163,7 @@ Jumlah Tamu: ${formData.guests} orang`;
                   value={formData.whatsapp}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-coffee-900/50 border border-coffee-700 text-cream placeholder-cream/40 focus:outline-none focus:border-coffee-500 transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-beige-300 text-coffee-800 placeholder-coffee-700/40 focus:outline-none focus:border-gold transition-colors shadow-sm"
                   placeholder="08123456789"
                 />
               </div>
@@ -172,15 +172,15 @@ Jumlah Tamu: ${formData.guests} orang`;
 
           {/* Reservation Details Section */}
           <div>
-            <h2 className="text-3xl font-bold text-cream mb-8 font-serif flex items-center gap-3">
-              <Calendar className="w-8 h-8 text-coffee-500" />
+            <h2 className="text-3xl font-bold text-coffee-800 mb-8 font-serif flex items-center gap-3">
+              <Calendar className="w-8 h-8 text-gold" />
               Detail Reservasi
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Branch */}
               <div className="md:col-span-2">
-                <label htmlFor="branch" className="text-cream font-semibold mb-2 flex items-center gap-2">
+                <label htmlFor="branch" className="text-coffee-800 font-semibold mb-2 flex items-center gap-2">
                   <MapPin className="w-5 h-5" />
                   Pilih Cabang <span className="text-red-400">*</span>
                 </label>
@@ -190,10 +190,10 @@ Jumlah Tamu: ${formData.guests} orang`;
                   value={formData.branch}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-coffee-900/50 border border-coffee-700 text-cream focus:outline-none focus:border-coffee-500 transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-beige-300 text-coffee-800 focus:outline-none focus:border-gold transition-colors shadow-sm"
                 >
                   {branches.map(branch => (
-                    <option key={branch.id} value={branch.id} className="bg-coffee-900">
+                    <option key={branch.id} value={branch.id} className="bg-white">
                       {branch.name}
                     </option>
                   ))}
@@ -202,7 +202,7 @@ Jumlah Tamu: ${formData.guests} orang`;
 
               {/* Date */}
               <div>
-                <label className="text-cream font-semibold mb-2 flex items-center gap-2">
+                <label className="text-coffee-800 font-semibold mb-2 flex items-center gap-2">
                   <Calendar className="w-5 h-5" />
                   Tanggal <span className="text-red-400">*</span>
                 </label>
@@ -213,7 +213,7 @@ Jumlah Tamu: ${formData.guests} orang`;
                   dateFormat="dd/MM/yyyy"
                   placeholderText="Pilih tanggal"
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-coffee-900/50 border border-coffee-700 text-cream focus:outline-none focus:border-coffee-500 transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-beige-300 text-coffee-800 focus:outline-none focus:border-gold transition-colors shadow-sm"
                   calendarClassName="custom-datepicker"
                   wrapperClassName="w-full"
                 />
@@ -221,7 +221,7 @@ Jumlah Tamu: ${formData.guests} orang`;
 
               {/* Time */}
               <div>
-                <label htmlFor="time" className="text-cream font-semibold mb-2 flex items-center gap-2">
+                <label htmlFor="time" className="text-coffee-800 font-semibold mb-2 flex items-center gap-2">
                   <Clock className="w-5 h-5" />
                   Waktu <span className="text-red-400">*</span>
                 </label>
@@ -232,13 +232,13 @@ Jumlah Tamu: ${formData.guests} orang`;
                   value={formData.time}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-coffee-900/50 border border-coffee-700 text-cream focus:outline-none focus:border-coffee-500 transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-beige-300 text-coffee-800 focus:outline-none focus:border-gold transition-colors shadow-sm"
                 />
               </div>
 
               {/* Number of Guests */}
               <div className="md:col-span-2">
-                <label htmlFor="guests" className="text-cream font-semibold mb-2 flex items-center gap-2">
+                <label htmlFor="guests" className="text-coffee-800 font-semibold mb-2 flex items-center gap-2">
                   <Users className="w-5 h-5" />
                   Jumlah Tamu <span className="text-red-400">*</span>
                 </label>
@@ -248,14 +248,14 @@ Jumlah Tamu: ${formData.guests} orang`;
                   value={formData.guests}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-coffee-900/50 border border-coffee-700 text-cream focus:outline-none focus:border-coffee-500 transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-beige-300 text-coffee-800 focus:outline-none focus:border-gold transition-colors shadow-sm"
                 >
                   {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
-                    <option key={num} value={num} className="bg-coffee-900">
+                    <option key={num} value={num} className="bg-white">
                       {num} {num === 1 ? 'orang' : 'orang'}
                     </option>
                   ))}
-                  <option value="10+" className="bg-coffee-900">10+ orang</option>
+                  <option value="10+" className="bg-white">10+ orang</option>
                 </select>
               </div>
             </div>
@@ -266,13 +266,13 @@ Jumlah Tamu: ${formData.guests} orang`;
             type="submit"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="w-full mt-10 bg-coffee-500 hover:bg-coffee-600 text-white py-4 rounded-full font-bold text-lg transition-colors flex items-center justify-center gap-3 shadow-lg"
+            className="w-full mt-10 bg-gold hover:bg-gold-dark text-white py-4 rounded-full font-bold text-lg transition-colors flex items-center justify-center gap-3 shadow-lg"
           >
             <Send className="w-5 h-5" />
             Kirim via WhatsApp
           </motion.button>
 
-          <p className="text-cream/60 text-sm text-center mt-6">
+          <p className="text-coffee-700/60 text-sm text-center mt-6">
             * Reservasi akan dikirim melalui WhatsApp ke cabang yang Anda pilih
           </p>
         </motion.form>

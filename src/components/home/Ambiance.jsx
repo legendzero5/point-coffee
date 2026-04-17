@@ -26,7 +26,7 @@ const Ambiance = () => {
   return (
     <section
       id="ambiance"
-      className="py-20 bg-coffee-800"
+      className="py-20"
       ref={sectionRef}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,10 +37,10 @@ const Ambiance = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-cream mb-6 font-serif">
+          <h2 className="text-5xl md:text-6xl font-bold text-coffee-800 mb-6 font-serif">
             Ambiance Kami
           </h2>
-          <p className="text-xl text-cream/80 max-w-2xl mx-auto">
+          <p className="text-xl text-coffee-700 max-w-2xl mx-auto">
             Tiga spot utama dengan suasana yang berbeda
           </p>
         </motion.div>
@@ -64,7 +64,7 @@ const Ambiance = () => {
               {/* Optional: Subtle overlay with title */}
               <div className="absolute inset-0 bg-gradient-to-t from-coffee-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-6 left-6">
-                  <h3 className="text-cream font-bold text-2xl font-serif">
+                  <h3 className="text-white font-bold text-2xl font-serif drop-shadow-lg">
                     {spot.title}
                   </h3>
                 </div>

@@ -23,7 +23,7 @@ const Community = () => {
   return (
     <section
       id="community"
-      className="py-20 bg-gradient-to-b from-coffee-900 to-coffee-800"
+      className="py-20 bg-beige-50"
       ref={sectionRef}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,10 +34,10 @@ const Community = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-cream mb-6 font-serif">
+          <h2 className="text-5xl md:text-6xl font-bold text-coffee-800 mb-6 font-serif">
             Komunitas Kami
           </h2>
-          <p className="text-xl text-cream/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-coffee-700 max-w-3xl mx-auto leading-relaxed">
             KOMA adalah rumah bagi berbagai komunitas. Dari pesepeda, pelari, hingga pekerja kreatif - semua menemukan tempat mereka di sini.
           </p>
         </motion.div>
@@ -61,10 +61,10 @@ const Community = () => {
 
               {/* Overlay dengan Title & Description */}
               <div className="absolute inset-0 bg-gradient-to-t from-coffee-900/95 via-coffee-900/60 to-transparent flex flex-col justify-end p-8">
-                <h3 className="text-cream font-bold text-3xl mb-3 font-serif">
+                <h3 className="text-white font-bold text-3xl mb-3 font-serif drop-shadow-lg">
                   {card.title}
                 </h3>
-                <p className="text-cream/90 text-lg">
+                <p className="text-white text-lg drop-shadow-md">
                   {card.description}
                 </p>
               </div>

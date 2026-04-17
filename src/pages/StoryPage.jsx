@@ -40,7 +40,7 @@ const StoryPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-coffee-900 via-coffee-800 to-coffee-900">
+    <div className="min-h-screen bg-sand">
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-coffee-900/80 to-coffee-800/80 z-10" />
@@ -55,10 +55,10 @@ const StoryPage = () => {
           transition={{ duration: 1 }}
           className="relative z-20 text-center px-4"
         >
-          <h1 className="text-6xl md:text-7xl font-bold text-cream mb-6 font-serif">
+          <h1 className="text-6xl md:text-7xl font-bold text-cream mb-6 font-serif drop-shadow-sm">
             Cerita Kami
           </h1>
-          <p className="text-2xl text-cream/90 max-w-2xl mx-auto">
+          <p className="text-2xl text-cream/80 max-w-2xl mx-auto">
             Perjalanan dari secangkir kopi menjadi keluarga besar
           </p>
         </motion.div>
@@ -78,14 +78,14 @@ const StoryPage = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h2 className="text-5xl md:text-6xl font-bold text-cream mb-8 font-serif">
+            <h2 className="text-5xl md:text-6xl font-bold text-coffee-800 mb-8 font-serif">
               Tahun 2020: Awal Mula
             </h2>
-            <p className="text-cream/90 text-xl leading-relaxed mb-6">
+            <p className="text-coffee-800 text-xl leading-relaxed mb-6">
               Dimulai dengan cinta terhadap kopi berkualitas tinggi dan keinginan untuk 
               berbagi pengalaman istimewa dengan setiap cangkir yang kami sajikan.
             </p>
-            <p className="text-cream/80 text-lg leading-relaxed">
+            <p className="text-coffee-700 text-lg leading-relaxed">
               Di tengah tahun yang penuh tantangan, kami membuka café pertama di Menteng 
               dengan komitmen untuk menyediakan kopi terbaik dan menciptakan ruang yang 
               hangat untuk semua orang. Setiap biji kopi dipilih dengan cermat, setiap 
@@ -138,14 +138,14 @@ const StoryPage = () => {
             transition={{ duration: 0.8, delay: 1 }}
             className="order-1 lg:order-2"
           >
-            <h2 className="text-5xl md:text-6xl font-bold text-cream mb-8 font-serif">
+            <h2 className="text-5xl md:text-6xl font-bold text-coffee-800 mb-8 font-serif">
               Berkembang Bersama
             </h2>
-            <p className="text-cream/90 text-xl leading-relaxed mb-6">
+            <p className="text-coffee-800 text-xl leading-relaxed mb-6">
               Dari satu lokasi menjadi keluarga besar dengan tiga cabang di Jakarta dan Bali. 
               Kami tumbuh bersama komunitas pecinta kopi yang setia.
             </p>
-            <p className="text-cream/80 text-lg leading-relaxed">
+            <p className="text-coffee-700 text-lg leading-relaxed">
               Setiap cabang memiliki karakter unik, namun tetap dengan komitmen yang sama: 
               menghadirkan pengalaman kopi terbaik. Dari workshop brewing, cupping sessions, 
               hingga acara komunitas, kami terus membangun koneksi yang bermakna melalui 
@@ -160,7 +160,7 @@ const StoryPage = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
-          <h2 className="text-5xl font-bold text-cream mb-12 font-serif text-center">
+          <h2 className="text-5xl font-bold text-coffee-800 mb-12 font-serif text-center">
             Momen Berkesan
           </h2>
           

@@ -39,7 +39,7 @@ const OurBranches = () => {
   return (
     <section
       id="branches"
-      className="py-20 bg-coffee-900"
+      className="py-20"
       ref={sectionRef}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,10 +50,10 @@ const OurBranches = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-cream mb-6 font-serif">
+          <h2 className="text-5xl md:text-6xl font-bold text-coffee-800 mb-6 font-serif">
             Cabang Kami
           </h2>
-          <p className="text-xl text-cream/80 max-w-2xl mx-auto">
+          <p className="text-xl text-coffee-700 max-w-2xl mx-auto">
             Tiga lokasi dengan pengalaman yang berbeda
           </p>
         </motion.div>
@@ -66,7 +66,7 @@ const OurBranches = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="glass rounded-2xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+              className="glass border border-beige-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 bg-white/40"
             >
               {/* Image */}
               <div className="h-64 overflow-hidden">
@@ -79,13 +79,13 @@ const OurBranches = () => {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-cream font-bold text-2xl mb-3 font-serif">
+                <h3 className="text-coffee-800 font-bold text-2xl mb-3 font-serif">
                   {branch.name}
                 </h3>
-                <p className="text-cream/80 mb-4">
+                <p className="text-coffee-700 mb-4">
                   {branch.description}
                 </p>
-                <div className="flex items-start gap-2 text-cream/70 text-sm mb-6">
+                <div className="flex items-start gap-2 text-coffee-700/80 text-sm mb-6">
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                   <span>{branch.location}</span>
                 </div>
@@ -93,7 +93,7 @@ const OurBranches = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleViewDetail(branch.id)}
-                  className="w-full bg-coffee-500 hover:bg-coffee-600 text-white py-3 rounded-full font-semibold transition-colors"
+                  className="w-full bg-gold hover:bg-gold-dark text-white py-3 rounded-full font-semibold transition-colors"
                 >
                   Lihat Detail
                 </motion.button>

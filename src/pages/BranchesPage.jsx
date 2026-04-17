@@ -72,7 +72,7 @@ const BranchesPage = () => {
   const currentBranch = branches[activeTab];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-coffee-900 to-coffee-800">
+    <div className="min-h-screen bg-sand">
       {/* Hero Section */}
       <section className="relative h-[50vh] overflow-hidden">
         <AnimatePresence mode="wait">
@@ -96,10 +96,10 @@ const BranchesPage = () => {
           className="relative z-20 h-full flex items-center justify-center text-center px-4"
         >
           <div>
-            <h1 className="text-5xl md:text-6xl font-bold text-cream mb-4 font-serif">
+            <h1 className="text-5xl md:text-6xl font-bold text-cream mb-4 font-serif drop-shadow-lg">
               Cabang & Menu
             </h1>
-            <p className="text-xl text-cream/90">
+            <p className="text-xl text-cream/90 drop-shadow-md">
               Pilih cabang untuk melihat lokasi dan menu
             </p>
           </div>
@@ -122,8 +122,8 @@ const BranchesPage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 ${activeTab === branch.id
-                ? 'bg-coffee-500 text-white shadow-lg'
-                : 'glass text-cream hover:bg-white/10'
+                ? 'bg-gold text-white shadow-lg'
+                : 'glass border border-beige-300 text-coffee-800 hover:bg-white/60 bg-white/40'
                 }`}
             >
               {branch.name}
@@ -155,46 +155,46 @@ const BranchesPage = () => {
               {/* Right: Branch Info - No Background (menyatu dengan body) */}
               <div className="flex flex-col justify-center">
                 {/* Title */}
-                <h2 className="text-4xl md:text-5xl font-bold text-cream mb-4 font-serif">
+                <h2 className="text-4xl md:text-5xl font-bold text-coffee-800 mb-4 font-serif">
                   {currentBranch.name}
                 </h2>
 
                 {/* Description */}
-                <p className="text-cream/80 text-lg leading-relaxed mb-8">
+                <p className="text-coffee-700 text-lg leading-relaxed mb-8">
                   {currentBranch.description}
                 </p>
 
                 {/* Location */}
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="bg-coffee-500 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="bg-gold w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-cream font-bold text-lg mb-1">Lokasi</h3>
-                    <p className="text-cream/80">{currentBranch.address}</p>
+                    <h3 className="text-coffee-800 font-bold text-lg mb-1">Lokasi</h3>
+                    <p className="text-coffee-700">{currentBranch.address}</p>
                   </div>
                 </div>
 
                 {/* Hours */}
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="bg-coffee-500 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="bg-gold w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-cream font-bold text-lg mb-1">Jam Operasional</h3>
-                    <p className="text-cream/80">{currentBranch.hours}</p>
+                    <h3 className="text-coffee-800 font-bold text-lg mb-1">Jam Operasional</h3>
+                    <p className="text-coffee-700">{currentBranch.hours}</p>
                   </div>
                 </div>
 
                 {/* Contact */}
                 <div className="flex items-start gap-4">
-                  <div className="bg-coffee-500 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="bg-gold w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-cream font-bold text-lg mb-1">Kontak</h3>
-                    <p className="text-cream/80 mb-1">{currentBranch.phone}</p>
-                    <p className="text-cream/70 text-sm">{currentBranch.email}</p>
+                    <h3 className="text-coffee-800 font-bold text-lg mb-1">Kontak</h3>
+                    <p className="text-coffee-700 mb-1">{currentBranch.phone}</p>
+                    <p className="text-coffee-600 text-sm">{currentBranch.email}</p>
                   </div>
                 </div>
               </div>
@@ -203,15 +203,15 @@ const BranchesPage = () => {
         </AnimatePresence>
       </div>
 
-      {/* Menu Section - Dark Background */}
-      <section className="bg-coffee-900 py-20">
+      {/* Menu Section - Beige-50 Background */}
+      <section className="bg-beige-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Menu />
+            <Menu branch={activeTab} />
           </motion.div>
         </div>
       </section>
@@ -226,10 +226,10 @@ const BranchesPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-5xl md:text-6xl font-bold text-cream mb-6 font-serif">
+            <h2 className="text-5xl md:text-6xl font-bold text-coffee-800 mb-6 font-serif">
               Location
             </h2>
-            <p className="text-xl text-cream/80 max-w-2xl mx-auto">
+            <p className="text-xl text-coffee-700 max-w-2xl mx-auto">
               Temukan kami di lokasi yang mudah diakses dengan suasana yang nyaman
             </p>
           </motion.div>

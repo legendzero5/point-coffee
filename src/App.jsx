@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -15,6 +15,14 @@ import BranchesPage from './pages/BranchesPage';
 import ReservationPage from './pages/ReservationPage';
 import PartnershipPage from './pages/PartnershipPage';
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [pathname]);
+  return null;
+};
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -27,7 +35,8 @@ function App() {
   return (
     <Router>
       <ParallaxProvider>
-        <div className="min-h-screen bg-coffee-900">
+        <ScrollToTop />
+        <div className="min-h-screen bg-sand">
           {/* Scroll Progress Bar */}
           <ScrollProgress />
 

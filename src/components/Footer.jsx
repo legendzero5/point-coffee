@@ -8,13 +8,13 @@ const Footer = () => {
     };
 
     const branches = [
-        { name: 'Aroma Café Menteng', to: '/cabang-menu?branch=menteng' },
-        { name: 'Aroma Café Sudirman', to: '/cabang-menu?branch=sudirman' },
-        { name: 'Aroma Café Bali', to: '/cabang-menu?branch=bali' },
+        { name: 'Koma Mambal', to: '/cabang-menu?branch=komaMambal' },
+        { name: 'Koma Point', to: '/cabang-menu?branch=komaPoint' },
+        { name: 'Koma Renon', to: '/cabang-menu?branch=komaRenon' },
     ];
 
     return (
-        <footer className="bg-gradient-to-b from-coffee-900 to-coffee-950 pt-20 pb-8">
+        <footer className="bg-footer-brown pt-20 pb-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* 3 Columns */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
@@ -24,7 +24,7 @@ const Footer = () => {
                             className="flex items-center space-x-2 mb-4"
                             whileHover={{ scale: 1.05 }}
                         >
-                            <Coffee className="w-10 h-10 text-coffee-400" />
+                            <Coffee className="w-10 h-10 text-gold-light" />
                             <span className="text-3xl font-bold font-serif text-cream">
                                 KOMA Coffee
                             </span>
@@ -46,7 +46,7 @@ const Footer = () => {
                                     <Link
                                         to={branch.to}
                                         onClick={scrollToTop}
-                                        className="text-cream/70 hover:text-coffee-300 transition-colors cursor-pointer block"
+                                        className="text-cream/80 hover:text-gold-light transition-colors cursor-pointer block"
                                     >
                                         {branch.name}
                                     </Link>
@@ -62,19 +62,19 @@ const Footer = () => {
                         </h3>
                         <div className="space-y-4">
                             <div className="flex items-center gap-3">
-                                <Mail className="w-5 h-5 text-coffee-400 flex-shrink-0" />
+                                <Mail className="w-5 h-5 text-gold-light flex-shrink-0" />
                                 <a
                                     href="mailto:info@komacoffee.id"
-                                    className="text-cream/70 hover:text-coffee-300 transition-colors"
+                                    className="text-cream/80 hover:text-gold-light transition-colors"
                                 >
                                     info@komacoffee.id
                                 </a>
                             </div>
                             <div className="flex items-center gap-3">
-                                <Phone className="w-5 h-5 text-coffee-400 flex-shrink-0" />
+                                <Phone className="w-5 h-5 text-gold-light flex-shrink-0" />
                                 <a
                                     href="tel:+622112345678"
-                                    className="text-cream/70 hover:text-coffee-300 transition-colors"
+                                    className="text-cream/80 hover:text-gold-light transition-colors"
                                 >
                                     +62 21 1234 5678
                                 </a>
@@ -99,7 +99,7 @@ const Footer = () => {
                 onClick={scrollToTop}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="fixed bottom-8 right-8 bg-coffee-500 hover:bg-coffee-600 p-4 rounded-full text-white shadow-2xl transition-colors z-40"
+                className="fixed bottom-8 right-8 bg-gold hover:bg-gold-dark p-4 rounded-full text-white shadow-2xl transition-colors z-40"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}

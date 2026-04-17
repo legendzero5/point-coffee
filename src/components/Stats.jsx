@@ -28,7 +28,7 @@ const Stats = () => {
     ];
 
     return (
-        <section id="stats" className="py-20 bg-coffee-800/50" ref={sectionRef}>
+        <section id="stats" className="py-20" ref={sectionRef}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {stats.map((stat, index) => (
@@ -37,10 +37,10 @@ const Stats = () => {
                             initial={{ opacity: 0, scale: 0.5 }}
                             animate={isInView ? { opacity: 1, scale: 1 } : {}}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
-                            className="glass rounded-2xl p-8 text-center hover:bg-coffee-700/30 transition-all duration-300 group"
+                            className="glass rounded-2xl p-8 text-center hover:bg-white/50 transition-all duration-300 group border border-beige-300/50 bg-white/30"
                         >
                             <motion.div
-                                className="text-coffee-400 flex justify-center mb-4"
+                                className="text-gold flex justify-center mb-4"
                                 whileHover={{ rotate: 360 }}
                                 transition={{ duration: 0.6 }}
                             >
@@ -52,7 +52,7 @@ const Stats = () => {
                                 isInView={isInView}
                                 delay={index * 0.2}
                             />
-                            <p className="text-cream/70 text-lg mt-2">{stat.label}</p>
+                            <p className="text-coffee-700 text-lg mt-2">{stat.label}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -90,7 +90,7 @@ const AnimatedCounter = ({ value, suffix, isInView, delay }) => {
     }, [value, isInView, delay]);
 
     return (
-        <h3 className="text-5xl font-bold text-cream font-serif">
+        <h3 className="text-5xl font-bold text-gold font-serif drop-shadow-sm">
             {count.toLocaleString()}{suffix}
         </h3>
     );
