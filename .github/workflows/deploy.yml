@@ -4,13 +4,13 @@ on:
   push:
     branches:
       - main
+      - staging
 
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  # ─── JOB 1: Build image dan push ke GHCR ─────────────────
   build-and-push:
     name: Build & Push ke GHCR
     runs-on: ubuntu-latest
@@ -27,7 +27,6 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          # GITHUB_TOKEN otomatis tersedia, tidak perlu buat manual
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Extract metadata
@@ -36,7 +35,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=raw,value=latest
+            type=raw,value=${{ github.ref_name }}
             type=sha,prefix=sha-,format=short
 
       - name: Setup Docker Buildx
@@ -49,16 +48,12 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          # Cache build layers — pnpm install tidak diulang
-          # kalau package.json & lockfile tidak berubah
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  # ─── JOB 2: Deploy ke VPS ─────────────────────────────────
   deploy:
     name: Deploy ke VPS
     runs-on: ubuntu-latest
-    # Job ini hanya jalan kalau job build-and-push berhasil
     needs: build-and-push
 
     steps:
@@ -70,27 +65,34 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            # Login ke GHCR pakai CR_PAT
-            # CR_PAT dipakai karena VPS adalah "mesin luar" yang butuh
-            # token permanen — GITHUB_TOKEN hanya hidup saat Actions berjalan
+            # Set variabel berdasarkan branch
+            if [ "${{ github.ref_name }}" = "main" ]; then
+              CONTAINER_NAME="point-coffee-production"
+              IMAGE_TAG="main"
+            else
+              CONTAINER_NAME="point-coffee-staging"
+              IMAGE_TAG="staging"
+            fi
+
+            # Login ke GHCR
             echo ${{ secrets.CR_PAT }} | docker login ghcr.io \
               -u ${{ github.actor }} --password-stdin
 
-            # Pull image terbaru
-            docker pull ghcr.io/${{ github.repository }}:latest
+            # Pull image sesuai tag branch
+            docker pull ghcr.io/${{ github.repository }}:${IMAGE_TAG}
 
             # Stop dan hapus container lama
-            docker stop mas-aris-project 2>/dev/null || true
-            docker rm mas-aris-project 2>/dev/null || true
+            docker stop ${CONTAINER_NAME} 2>/dev/null || true
+            docker rm ${CONTAINER_NAME} 2>/dev/null || true
 
-            # Jalankan container baru di network proxy
+            # Jalankan container baru
             docker run -d \
-              --name mas-aris-project \
+              --name ${CONTAINER_NAME} \
               --restart unless-stopped \
               --network proxy \
-              ghcr.io/${{ github.repository }}:latest
+              ghcr.io/${{ github.repository }}:${IMAGE_TAG}
 
-            # Bersihkan image lama yang tidak terpakai
+            # Bersihkan image lama
             docker image prune -f
 
-            echo "✅ Deploy berhasil!"
+            echo "✅ Deploy ${CONTAINER_NAME} berhasil!"

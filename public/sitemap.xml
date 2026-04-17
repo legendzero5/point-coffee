@@ -4,7 +4,7 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://komacoffee.id/</loc>
+    <loc>https://point-coffee.com/</loc>
     <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -12,7 +12,7 @@
   
   <!-- Cerita Kami Page -->
   <url>
-    <loc>https://komacoffee.id/cerita-kami</loc>
+    <loc>https://point-coffee.com/cerita-kami</loc>
     <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -20,7 +20,7 @@
   
   <!-- Cabang & Menu Page -->
   <url>
-    <loc>https://komacoffee.id/cabang-menu</loc>
+    <loc>https://point-coffee.com/cabang-menu</loc>
     <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -28,7 +28,7 @@
   
   <!-- Koma Mambal -->
   <url>
-    <loc>https://komacoffee.id/cabang-menu?branch=komaMambal</loc>
+    <loc>https://point-coffee.com/cabang-menu?branch=komaMambal</loc>
     <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -36,7 +36,7 @@
   
   <!-- Koma Point -->
   <url>
-    <loc>https://komacoffee.id/cabang-menu?branch=komaPoint</loc>
+    <loc>https://point-coffee.com/cabang-menu?branch=komaPoint</loc>
     <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -44,7 +44,7 @@
   
   <!-- Koma Renon -->
   <url>
-    <loc>https://komacoffee.id/cabang-menu?branch=komaRenon</loc>
+    <loc>https://point-coffee.com/cabang-menu?branch=komaRenon</loc>
     <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -52,7 +52,7 @@
   
   <!-- Reservasi Page -->
   <url>
-    <loc>https://komacoffee.id/reservasi</loc>
+    <loc>https://point-coffee.com/reservasi</loc>
     <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -60,7 +60,7 @@
   
   <!-- Partnership Page -->
   <url>
-    <loc>https://komacoffee.id/partnership</loc>
+    <loc>https://point-coffee.com/partnership</loc>
     <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
