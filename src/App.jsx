@@ -14,6 +14,7 @@ import StoryPage from './pages/StoryPage';
 import BranchesPage from './pages/BranchesPage';
 import ReservationPage from './pages/ReservationPage';
 import PartnershipPage from './pages/PartnershipPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -51,6 +52,7 @@ function App() {
               <Route path="/cabang-menu" element={<BranchesPage />} />
               <Route path="/reservasi" element={<ReservationPage />} />
               <Route path="/partnership" element={<PartnershipPage />} />
+              <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>
 

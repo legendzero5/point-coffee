@@ -56,8 +56,9 @@ h6 {
   font-family: "Playfair Display", serif;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
+/* Custom Scrollbar - DISABLED to prevent width issues */
+/* Use browser default scrollbar */
+/* ::-webkit-scrollbar {
   width: 10px;
 }
 
@@ -72,7 +73,7 @@ h6 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #7A6956;
-}
+} */
 
 /* Glassmorphism utility */
 .glass {
