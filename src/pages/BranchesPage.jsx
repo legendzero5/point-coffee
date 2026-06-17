@@ -96,7 +96,7 @@ const BranchesPage = () => {
           className="relative z-20 h-full flex items-center justify-center text-center px-4"
         >
           <div>
-            <h1 className="text-5xl md:text-6xl font-bold text-cream mb-4 font-serif drop-shadow-lg">
+            <h1 className="text-5xl md:text-6xl font-bold text-cream mb-4 font-display drop-shadow-lg">
               Cabang & Menu
             </h1>
             <p className="text-xl text-cream/90 drop-shadow-md">

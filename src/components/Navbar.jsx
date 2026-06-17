@@ -43,8 +43,8 @@ const Navbar = () => {
                         whileTap={{ scale: 0.95 }}
                         onClick={() => navigate('/')}
                     >
-                        <Coffee className={`w-8 h-8 ${isScrolled ? 'text-coffee-800' : 'text-cream'}`} />
-                        <span className={`text-2xl font-bold font-serif drop-shadow-lg ${isScrolled ? 'text-coffee-800' : 'text-cream'}`}>
+                        {/* <Coffee className={`w-8 h-8 ${isScrolled ? 'text-coffee-800' : 'text-cream'}`} /> */}
+                        <span className={`text-2xl font-bold font-display drop-shadow-lg ${isScrolled ? 'text-coffee-800' : 'text-cream'}`}>
                             KOMA
                         </span>
                     </motion.div>

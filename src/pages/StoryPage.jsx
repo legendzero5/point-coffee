@@ -55,7 +55,7 @@ const StoryPage = () => {
           transition={{ duration: 1 }}
           className="relative z-20 text-center px-4"
         >
-          <h1 className="text-6xl md:text-7xl font-bold text-cream mb-6 font-serif drop-shadow-sm">
+          <h1 className="text-6xl md:text-7xl font-bold text-cream mb-6 font-display drop-shadow-sm">
             Cerita Kami
           </h1>
           <p className="text-2xl text-cream/80 max-w-2xl mx-auto">
