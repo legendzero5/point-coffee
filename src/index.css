@@ -1,4 +1,183 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
+/* ─── DrukWideBold ─────────────────────────────────────── */
+@font-face {
+  font-family: "DrukWideBold";
+  src: url("/fonts/DrukWideBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── HelveticaNowDisplay ──────────────────────────────── */
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-Hairline.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-HairlineI.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-Thin.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-ThinIta.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-ExtLt.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-ExtLtIta.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-Light.woff2") format("woff2");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-LightIta.woff2") format("woff2");
+  font-weight: 350;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-RegIta.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-MedIta.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-BoldIta.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-ExtBdIta.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-ExtBlk.woff2") format("woff2");
+  font-weight: 850;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-ExtBlkIta.woff2") format("woff2");
+  font-weight: 850;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("/fonts/HelveticaNowDisplay-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Ragasta ──────────────────────────────────────────── */
+@font-face {
+  font-family: "Ragasta";
+  src: url("/fonts/Ragasta.woff2") format("woff2"),
+       url("/fonts/Ragasta.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ragasta";
+  src: url("/fonts/RagastaItalic.woff2") format("woff2"),
+       url("/fonts/RagastaItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -35,7 +214,7 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "HelveticaNowDisplay", sans-serif;
   background-color: #EDE7DB;
   color: #3D3229;
   overflow-x: hidden;
@@ -53,7 +232,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Playfair Display", serif;
+  font-family: "Ragasta", serif;
 }
 
 /* Custom Scrollbar - DISABLED to prevent width issues */
@@ -101,7 +280,7 @@ h6 {
 }
 
 .custom-datepicker {
-  font-family: 'Inter', sans-serif;
+  font-family: "HelveticaNowDisplay", sans-serif;
   background-color: #FFFCF7 !important;
   border: 2px solid #C9A961 !important;
   border-radius: 1.5rem !important;

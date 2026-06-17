@@ -77,8 +77,9 @@ export default {
                 },
             },
             fontFamily: {
-                serif: ['Playfair Display', 'serif'],
-                sans: ['Inter', 'sans-serif'],
+                display: ['"DrukWideBold"', 'sans-serif'],
+                sans: ['"HelveticaNowDisplay"', 'sans-serif'],
+                serif: ['"Ragasta"', 'serif'],
             },
             animation: {
                 'float': 'float 3s ease-in-out infinite',

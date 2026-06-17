@@ -45,7 +45,7 @@ const StoryPage = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-coffee-900/80 to-coffee-800/80 z-10" />
         <img
-          src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1600"
+          src="https://res.cloudinary.com/dpadqzd98/image/upload/v1780171603/about-bg_f3vrt8.jpg?w=1600"
           alt="Our Story"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -55,7 +55,7 @@ const StoryPage = () => {
           transition={{ duration: 1 }}
           className="relative z-20 text-center px-4"
         >
-          <h1 className="text-6xl md:text-7xl font-bold text-cream mb-6 font-serif drop-shadow-sm">
+          <h1 className="text-6xl md:text-7xl font-bold text-cream mb-6 font-display drop-shadow-sm">
             Cerita Kami
           </h1>
           <p className="text-2xl text-cream/80 max-w-2xl mx-auto">

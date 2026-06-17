@@ -90,7 +90,7 @@ const Hero = () => {
         >
             {/* Parallax Background Image */}
             <div
-                className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1920')] bg-cover bg-center bg-fixed opacity-30"
+                className="absolute inset-0 bg-[url('https://res.cloudinary.com/dpadqzd98/image/upload/v1780171603/about-bg_f3vrt8.jpg?w=1920')] bg-cover bg-center bg-fixed opacity-30"
                 style={{ transform: 'translateZ(-1px) scale(1.5)' }}
             />
 
@@ -107,7 +107,7 @@ const Hero = () => {
                     variants={headingVariants}
                 >
                     <motion.h1
-                        className="text-6xl md:text-8xl font-bold text-cream mb-6 font-serif"
+                        className="text-6xl md:text-8xl font-bold text-cream mb-6 font-display tracking-widest"
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1, delay: 0.2 }}

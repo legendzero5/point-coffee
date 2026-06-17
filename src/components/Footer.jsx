@@ -24,9 +24,9 @@ const Footer = () => {
                             className="flex items-center space-x-2 mb-4"
                             whileHover={{ scale: 1.05 }}
                         >
-                            <Coffee className="w-10 h-10 text-gold-light" />
-                            <span className="text-3xl font-bold font-serif text-cream">
-                                KOMA Coffee
+                            {/* <Coffee className="w-10 h-10 text-gold-light" /> */}
+                            <span className="text-3xl font-bold font-display text-cream">
+                                KOMA
                             </span>
                         </motion.div>
                         <p className="text-cream/70 leading-relaxed">
