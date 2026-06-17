@@ -45,7 +45,7 @@ const StoryPage = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-coffee-900/80 to-coffee-800/80 z-10" />
         <img
-          src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1600"
+          src="https://res.cloudinary.com/dpadqzd98/image/upload/v1780171603/about-bg_f3vrt8.jpg?w=1600"
           alt="Our Story"
           className="absolute inset-0 w-full h-full object-cover"
         />
